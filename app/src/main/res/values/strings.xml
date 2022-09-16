@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">iLearn</string>
+    <string name="welcome_message">Welcome to Wakanda!</string>
 </resources>

@@ -10,11 +10,16 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -44,17 +49,34 @@ fun GreetNewMemberText(name: String){
             text = "Hello $name!",
             fontSize = 25.sp,
             color = Color.White,
-            textAlign = TextAlign.Center,
+//            textAlign = TextAlign.Center,
             modifier = Modifier
+                .fillMaxWidth()
+                .wrapContentWidth(align = Alignment.CenterHorizontally)
                 .padding(10.dp)
         )
         Text(
-            text = "Welcome to Wakanda!",
+            text = stringResource(R.string.welcome_message),
             fontSize = 30.sp,
             color = Color.Gray,
-            textAlign = TextAlign.Center,
+//            textAlign = TextAlign.Center,
             modifier = Modifier
+                .fillMaxWidth()
+                .wrapContentWidth(align = Alignment.CenterHorizontally)
                 .padding(10.dp)
+        )
+        Text(
+            text = "~ chacha",
+            fontSize = 30.sp,
+            color = Color.Gray,
+            modifier = Modifier
+                .fillMaxWidth()
+//                .wrapContentWidth(Alignment.Bottom)
+                .padding(10.dp),
+            textAlign = TextAlign.End,
+            fontWeight = FontWeight.ExtraBold,
+            fontStyle = FontStyle.Italic
+
         )
     }
 }
